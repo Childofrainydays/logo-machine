@@ -1,0 +1,3 @@
+const { makeLogo } = require('');
+
+makeLogo('');
