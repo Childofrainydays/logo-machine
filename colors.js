@@ -12,4 +12,5 @@ const colorOptions = [
     'white',
   ];
   
+  // Export the colorOptions array
   module.exports = colorOptions;

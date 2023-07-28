@@ -1,7 +1,40 @@
 <!-- This is a template for the logo svg. -->
+<!-- This is a template for the logo svg. -->
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-    <!-- The shape of the logo is determined by the shape variable ${shape} which is replaced by the user input. -->
-    <!-- The color of the logo is determined by the color variable ${color} which is replaced by the user input. -->
-  <${shape} cx="50" cy="50" r="40" fill="${color}" />
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="16">${name}</text>
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="16">${name}</text>
+
+    <g id="circle" ${shape === 'circle' ? '' : 'style="display:none"'} >
+        <!-- Path for circle -->
+        <circle cx="50" cy="50" r="40" fill="${color}" />
+    </g>
+
+    <g id="square" ${shape === 'square' ? '' : 'style="display:none"'} >
+        <!-- Path for square -->
+        <rect x="10" y="10" width="80" height="80" fill="${color}" />
+    </g>
+
+    <g id="triangle" ${shape === 'triangle' ? '' : 'style="display:none"'} >
+        <!-- Path for triangle -->
+        <path d="M50 10 L90 90 L10 90 Z" fill="${color}" />
+    </g>
+
+    <g id="star" ${shape === 'star' ? '' : 'style="display:none"'} >
+        <!-- Path for star -->
+        <path d="M50 5 L60 35 L90 40 L65 60 L75 90 L50 70 L25 90 L35 60 L10 40 L40 35 Z" fill="${color}" />
+    </g>
+
+    <g id="heart" ${shape === 'heart' ? '' : 'style="display:none"'} >
+        <!-- Path for heart -->
+        <path d="M50 85 Q75 60 50 35 Q25 60 50 85 Z" fill="${color}" />
+    </g>
+
+    <g id="hexagon" ${shape === 'hexagon' ? '' : 'style="display:none"'} >
+        <!-- Path for hexagon -->
+        <path d="M50 10 L85 35 L85 65 L50 90 L15 65 L15 35 Z" fill="${color}" />
+    </g>
+
+    <g id="diamond" ${shape === 'diamond' ? '' : 'style="display:none"'} >
+        <!-- Path for diamond -->
+        <path d="M50 10 L85 50 L50 90 L15 50 Z" fill="${color}" />
+    </g>
 </svg>
